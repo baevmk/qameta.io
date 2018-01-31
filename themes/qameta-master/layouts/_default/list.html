@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	{{ partial "head.html" . }}
+	
+
+<body>
+	{{ partial "header.html" . }}
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<!-- CONTENT USE _INDEX.MD FOR LIST PAGE CONTENT -->
+					<div>
+						{{ range last 4 .Pages }}
+							<h1 class="common_h1"><a class="link_common" href="{{.URL}}">{{.Title}}</a></h1>
+							<div class="secondary-text"> {{ truncate 1500 .Content }} </div>
+						{{ end }}
+					</div>
+				</div>				
+			</div>			
+		</div>
+	</section>
+	
+	{{ partial "footer.html"}}
+</body>
+</html>

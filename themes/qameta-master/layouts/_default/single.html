@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+
+	{{ partial "head.html" . }}
+
+
+<!-- DEFAULT CONTENT PAGE -->
+
+<body>
+	<!-- {{ partial "header.html" . }}-->
+	{{ partial "header.html" . }}
+	<!-- CONTENT SECTION "single"-->
+
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h1 class="secondary-header"><span class="primary-header">{{ .Title }}</span></h1>
+					<div class="secondary-text">{{ .Content }}</div>
+				</div>
+			</div>
+		</div>		
+	</section>
+	{{ partial "footer.html"}}
+</body>
+</html>

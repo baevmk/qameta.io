@@ -1,0 +1,33 @@
+<!-- 3_ARTICLES_SECTION -->
+<section class="rowblogs">
+	<div class="container">
+		<!-- 3_ROWS_1 -->
+		<div class="row middle-xs middle-sm middle-md middle-lg center-xs start-sm start-md start-lg">
+			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 center-xs center-sm center-md center-lg">
+				<h1 class="common_icon far fa-newspaper"></h1>
+			</div>
+			<div class="col-xs">
+				<h1 class="common_h2"> {{- .Site.Data.maindata.title_rowblogs -}} </h1>
+			</div>
+			
+		</div>
+		<div class="row">
+			{{ range last 3 (where .Data.Pages.ByDate "Section" "blogs") }}
+				<!-- TODO CHANGE CLASSES FOR TEXT -->
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<h1 class="common_h2">
+						<a class="link_common link_hover" href="{{ .Permalink }}">
+							{{ .Title }}
+						</a>
+					</h1>
+					<!-- CONTENTS -->
+					<div class="common_text">
+						{{- .Date.Format "2 Jan, 2015" -}} </br>
+						{{- truncate 350 .Content -}}
+					</div>
+					
+				</div>
+			{{ end }}
+		</div>
+	</div>
+</section>

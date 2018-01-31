@@ -1,0 +1,97 @@
+
+<section class="projects_slider">
+	<div class="container">
+		<div class="project_row row middle-xs middle-sm middle-md middle-lg start-xs start-sm start-md start-lg">
+			<!-- ICON -->
+			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 center-xs center-sm center-md center-lg">
+				<h1 class="common_icon fas fa-code-branch"></h1>
+			</div>
+<!-- SECTION TITLE -->
+			<div class="col-xs">
+				<h1 class="primary_h2"> {{- .Site.Data.maindata.projects_title -}} </h1>
+			</div>				
+		</div>
+		<div class="allure_row row top-xs top-sm top-md top-lg start-xs start-sm start-md start-lg">
+			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 ">
+				<img src=" {{- .Site.Data.maindata.project_main_image -}} " class="project_main_image">
+			</div>
+			<div class="col-xs">
+				<div class="box">
+					<div class="row middle-xs middle-sm middle-md middle-lg start-xs start-sm start-md start-lg">
+						<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+<!-- LOGO -->
+							<img src=" {{- .Site.Data.maindata.project_main_logo -}} " class="allure_logo">
+						</div>
+						<div class="col-xs">
+							<div class="box">
+								<div class="row">
+<!-- ROW ALLURE -->
+										<h1><a class="allure_title allure_hover" href="{{ .Permalink }}">
+<!--TITLE ALLURE -->
+											{{- .Site.Data.maindata.project_main_title -}}
+											</a></h1>
+									
+								</div>
+								<div class="row">
+<!-- SUBTITLE -->
+									<h1 class="allure_subtitle"> {{- .Site.Data.maindata.project_subtitle -}} </h1>
+								</div>
+							</div>
+						</div>
+					</div>
+<!-- Description ALLURE -->
+					<div class="row top-xs top-sm top-md top-lg start-xs start-sm start-md start-lg">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et vestibulum lectus. Cras placerat quam et dignissim pharetra. Vestibulum tortor lorem, ornare cursus hendrerit et, dignissim quis ligula.
+					</div>
+<!-- BUTTON ALLURE -->
+					<div class="row bottom-xs bottom-sm bottom-md bottom-lg center-xs center-sm center-md center-lg">
+							<div><a href="{{ .Permalink }}"><h1 class="button_hover"><i class="fas fa-download"></i> Download</h1></div>
+
+							
+					</div>
+				</div>
+			</div>			
+		</div>
+<!-- ######### ATLAS & ALLURE PRO ROW ########## -->
+		<div class="project_row row middle-xs middle-sm middle-md middle-lg center-xs start-sm start-md start-lg">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="box">
+					<div class="row">
+						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 center-xs center-sm center-md center-lg">
+							<!-- LOGO -->
+							<img src=" {{- .Site.Data.maindata.project_atlas_logo -}} " class="project_main_logo">
+						</div>
+						<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+							<h1 class="common_h1"> {{- .Site.Data.maindata.project_atlas_title -}} </h1>
+						</div>
+					</div>
+					<!-- Links to social -->
+					<div class="row">						
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">						
+							<p> {{- .Site.Data.maindata.project_atlas_description -}} </p>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="box">
+					<div class="row">
+						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 center-xs center-sm center-md center-lg">
+							<!-- LOGO -->
+							<img src=" {{- .Site.Data.maindata.project_allurepro_logo -}} " class="project_main_logo">
+						</div>
+						<div class="col-xs-11 col-sm-11 col-md-5 col-lg-5">
+							<h1 class="primary_h2"> {{- .Site.Data.maindata.project_allurepro_title -}} </h1>
+						</div>
+					</div>
+					<!-- Links to social -->
+					<div class="row">						
+						<div class="col-xs">						
+							<p> {{- .Site.Data.maindata.project_allurepro_description -}} </p>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

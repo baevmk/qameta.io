@@ -1,0 +1,59 @@
+
+# CSS links:
+# TODO: how to???
+flexboxgrid_link: "css/flexboxgrid.css"
+
+# Header
+qameta_io: "QAmeta.io"
+header_subtitle: "Software Development and Quality"
+
+
+
+# Showcase part main page
+title_showcase_1: "The next generation of "
+title_showcase_2: "Allure Report"
+description_showcase: "We solve problems that virtually every company that develops software is facing."
+image_showcase: "img/showcase-img/allure-overview.png"
+bkg_showcase: "img/showcase-img/StarryBkg.png"
+background: "img/88f_eef.png"
+
+
+
+# Projects section
+projects_title: "Our projects"
+project_main_title: "Allure"
+project_subtitle: "Flexible lightweight test report tool"
+project_main_description: "Allure Framework - is a flexible lightweight multi-language test report tool"
+project_main_logo: "img/allure/allure-lg.png"
+project_main_image: "img/allure/allure-overview.png"
+
+project_atlas_title: "Atlas"
+project_atlas_description: "Application Test Layout. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et vestibulum lectus. Cras placerat quam et dignissim pharetra."
+project_atlas_logo: "img/allure/atlas_logo.png"
+
+project_allurepro_title: "Allure pro"
+project_allurepro_description: "Allure Framework - is a flexible lightweight multi-language test report tool. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et vestibulum lectus. Cras placerat quam et dignissim pharetra."
+project_allurepro_logo: "img/allure/allurepro_logo.png"
+
+
+# RowBlogs part main page
+title_rowblogs: "From our blogs:"
+description_rowblogs:
+image_rowblogs:
+
+# Contact part main page
+title_contact: "We are here to help you"
+phone_contact: "+7-(922)-71625380"
+email_contact: "someone@everywhere.com"
+address_contact: "Russia, st. Petersburg, Kupchino"
+
+# Footer
+follow_footer: "Follow QAmeta"
+quicklinks_footer: "Quick links"
+github_link: "https://github.com/qameta"
+facebook_link: 
+twitter_link: "https://twitter.com/qametasoftware"
+googleplus_link:
+youtube_link:
+# Todo LinkedIn???
+  

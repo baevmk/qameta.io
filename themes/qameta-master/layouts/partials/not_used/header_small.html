@@ -1,0 +1,38 @@
+<!-- HEADER -->
+<header class="main_header">
+	<div class="container">
+		<div class="row center-xs end-sm end-md end-lg middle-xs middle-sm middle-md middle-lg">
+			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 header-content">
+				<div class="box">
+					<div class="row start-xs start-sm start-md start-lg bottom-xs bottom-sm bottom-md bottom-lg">
+						<div class="col-xs-12">
+							<img class="header_logo" src="img/logo.png">
+							<h1 class="header_main"><span class="header_main_red">A</span>meta.io</h1>
+						</div>
+					</div>
+				</div>
+
+
+
+				
+
+			</div>
+
+			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">		
+
+				<!-- LINKS -->
+				<div class="navbox">
+					<a href="{{ .Site.BaseURL }}" class="link_common link_hover">Home</a>
+				</div>
+				{{ range $section_name := .Site.Home.Sections }}
+					{{ if ne "Showcases" $section_name.Title }}
+						<div class="navbox">
+							<a href="{{ .Permalink }}" class="link_common link_hover">{{ .Title }}</a>
+						</div>		
+					{{ end }}			
+				{{ end }}	
+
+			</div>
+		</div>
+	</div>
+</header>

@@ -1,0 +1,9 @@
+baseURL = "http://localhost:1313"
+languageCode = "en-us"
+title = "Software Quality | Qameta"
+theme = "qameta-master"
+
+# Taxonomies:
+[taxonomies]
+	tag = "tags"
+	category = "categories"

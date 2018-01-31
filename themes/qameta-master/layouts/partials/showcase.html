@@ -1,0 +1,35 @@
+
+<!--  SHOWCASE SECTION -->
+<section class="showcase">
+	<div class="arrow_left arrow">
+		<h1 class="fas fa-arrow-circle-left fa-5x"></h1>
+	</div>
+
+
+	<!--	SLIDER IMAGES	-->
+	{{ range where .Data.Pages.ByDate "Section" "showcase" }}
+		
+		<div class="slider" style="background: url({{ .Params.background }});">
+	
+			<!-- Content container -->
+			<div class="container">
+				<div class="showcase_row row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
+
+					<div class="showcase_content col-xs-12 col-sm-6 col-md-6 col-lg-6">
+						{{- truncate 300 .Content -}}
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	{{ end }}
+	<div class="arrow_right arrow">
+		<h1 class="fas fa-arrow-circle-right fa-5x"></h1>
+	</div>
+	<script src=" {{ .Site.BaseURL }}/js/showcase-slider.js "></script>
+
+
+
+</section>

@@ -1,0 +1,45 @@
+<!-- HEADER -->
+<header class="main_header">
+	<div class="container">
+		
+		<div class="row middle-xs middle-sm middle-md middle-lg center-xs">
+			<!-- LOGO -->
+			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+				<img src="img/logo.png" class="header_logo">
+			</div>
+			<!-- TITLE & LINKS ROW -->
+			<div class="col-xs">
+
+				<div class="box">
+					<div class="row nav_row middle-sm middle-md middle-lg center-xs start-sm start-md start-lg">
+						<div class="col-xs">
+							<h1 class="title_main">{{- .Site.Data.maindata.qameta_io -}}</h1>
+						</div>
+						<!-- LINKS -->
+						<div class="col-xs">
+							<div class="navbox">
+								<a href="{{ .Site.BaseURL }}" class="link_common link_hover">Home</a>
+							</div>
+							{{ range $section_name := .Site.Home.Sections }}
+								{{ if ne "Showcases" $section_name.Title }}
+									<div class="navbox">
+										<a href="{{ .Permalink }}" class="link_common link_hover">{{ .Title }}</a>
+									</div>
+								{{ end }}			
+							{{ end }}
+						</div>
+					</div>
+				</div>
+				<!-- Subtitle -->
+				<div class="box">
+					<div class="row middle-sm middle-md middle-lg  center-xs start-sm start-md start-lg">
+						<div class="col-xs">
+							<h1 class="common_h2">{{- .Site.Data.maindata.header_subtitle -}}</h1>
+						</div>
+						<!-- TODO: ADD SOCIAL LINKS COL -->
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+</header>

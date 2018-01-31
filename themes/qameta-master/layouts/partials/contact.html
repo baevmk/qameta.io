@@ -1,0 +1,63 @@
+
+<section>
+	<div class="container">
+		<div class="row middle-xs middle-sm middle-md middle-lg start-xs start-sm start-md start-lg">
+			<!-- ICON -->
+			<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 center-xs center-sm center-md center-lg">
+				<h1 class="common_icon fas fa-comments"></h1>
+			</div>
+			<!-- SECTION TITLE -->
+			<div class="col-xs">
+				<h1 class="common_h2"> {{- .Site.Data.maindata.title_contact -}} </h1>
+			</div>				
+		</div>
+		<div class="row contact_row top-xs top-sm top-md top-lg start-xs start-sm start-md start-lg">
+			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">				
+				{{ with .Site.GetPage "page" "about" "contact.md" }}					
+					{{ .Content }}
+				{{ end }}
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				<!-- TAKE DATA FROM CONTACT.MD PARAMS -->
+
+				{{ with .Site.GetPage "page" "about" "contact.md" }}
+					<h1 class="common_h2">Contact Us:</h1>
+					<!-- If local .Param set in frontmatter -->
+					<div class="box">
+						{{ if isset .Params "phone_contact" }}
+							<div class="row row middle-xs middle-sm middle-md middle-lg">
+								<div class="col-xs-0.5 col-sm-0.5 col-md-0.5 col-lg-0.5 center-xs center-sm center-md center-lg">
+									<h1 class="small_icon fas fa-mobile"></h1>
+								</div>
+								<div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+									<p>Phone Number: {{- printf .Params.phone_contact -}}</p>
+								</div>
+							</div>
+						{{ end }}
+						{{ if isset .Params "email_contact" }}
+							<div class="row row middle-xs middle-sm middle-md middle-lg">
+								<div class="col-xs-0.5 col-sm-0.5 col-md-0.5 col-lg-0.5 center-xs center-sm center-md center-lg">
+									<h1 class="small_icon fas fa-envelope"></h1>
+								</div>
+								<div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+									<p>E-Mail: {{- printf .Params.email_contact -}}</p>
+								</div>
+							</div>
+							
+						{{ end }}
+						{{ if isset .Params "address_contact" }}
+							<div class="row row middle-xs middle-sm middle-md middle-lg">
+								<div class="col-xs-0.5 col-sm-0.5 col-md-0.5 col-lg-0.5 center-xs center-sm center-md center-lg">
+									<h1 class="small_icon fas fa-map-marker"></h1>
+								</div>
+								<div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+									<p>Address: {{- printf .Params.address_contact -}}</p>
+								</div>
+							</div>							
+						{{ end }}
+					</div>
+				{{ end }}							
+			</div>
+		</div>
+	</div>
+</section>

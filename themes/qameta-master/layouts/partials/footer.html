@@ -1,0 +1,86 @@
+<!-- FOOTER -->
+
+<footer class="main_footer">
+
+
+	{{ $github_link := .Site.Data.maindata.github_link }}
+	{{ $facebook_link := .Site.Data.maindata.facebook_link }}
+	{{ $twitter_link := .Site.Data.maindata.twitter_link }}
+	{{ $googleplus_link := .Site.Data.maindata.googleplus_link }}
+	{{ $youtube_link := .Site.Data.maindata.youtube_link }}
+
+	<div class="container">
+		<div class="row middle-xs middle-sm middle-md middle-lg center-xs start-sm start-md start-lg">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="box">
+					<div class="row">
+						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 center-xs center-sm center-md center-lg">
+							<h1 class="common_icon fas fa-thumbs-up"></h1>
+						</div>
+						<div class="col-xs-11 col-sm-11 col-md-5 col-lg-5">
+							<h1 class="common_h2"> {{- .Site.Data.maindata.follow_footer -}} </h1>
+						</div>
+					</div>
+					<!-- Links to social -->
+					<div class="row">						
+						<div class="col-xs">						
+							<a href=" {{ $github_link }} " class="common_text github_hover fab fa-github"></a>
+						</div>
+						<div class="col-xs">
+							<a href=" {{ $facebook_link }} " class="common_text facebook_hover fab fa-facebook-f"></a>
+						</div>
+						<div class="col-xs">
+							<a href=" {{ $twitter_link }} " class="common_text twitter_hover fab fa-twitter"></a>
+						</div>
+						<div class="col-xs">
+							<a href=" {{ $googleplus_link }} " class="common_text googleplus_hover fab fa-google-plus-g"></a>
+						</div>
+						<div class="col-xs">
+							<a href=" {{ $youtube_link }} " class="common_text youtube_hover fab fa-youtube"></a>
+						</div>
+					</div>					
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="box">
+					<div class="row">
+						<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 center-xs center-sm center-md center-lg">
+							<h1 class="common_icon fas fa-link"></h1>
+						</div>
+						<div class="col-xs-11 col-sm-11 col-md-5 col-lg-5">
+							<h1 class="common_h2"> {{- .Site.Data.maindata.quicklinks_footer -}} </h1>
+						</div>
+					</div>
+					<!-- Links to social -->
+					
+					<!-- QUICK LINKS TEXT -->						
+					<div class="row middle-xs middle-sm middle-md middle-lg">
+						<div class="col-xs">
+							<div class="navbox_footer">
+								<a href="{{ .Site.BaseURL }}" class="link_common link_hover">Home</a>
+							</div>
+						</div>
+						{{ range $section_name := .Site.Home.Sections }}
+							{{ if ne "Showcases" $section_name.Title }}
+								<div class="col-xs">
+									<div class="navbox_footer">
+										<a href="{{ .Permalink }}" class="link_common link_hover">{{ .Title }}</a>
+									</div>
+								</div>
+							{{ end }}			
+						{{ end }}
+					</div>
+				</div>						
+			
+			</div>					
+		</div>
+		<!-- COPYRIGHTS -->
+		<div class="row row_copyright center-xs center-sm center-md center-lg middle-xs bottom-sm bottom-md bottom-lg">
+
+			<!-- COPYRIGHT TEXT -->
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="common_text">QAmeta.io &copy 2018</div>
+			</div>
+		</div>
+	</div>
+</footer>
